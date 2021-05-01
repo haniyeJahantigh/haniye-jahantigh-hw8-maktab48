@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="valid-form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" action=" " name=" myForm" onSubmit="return validation()">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+          required
+        />
+
+        <label for="">Phone number</label>
+        <br />
+        <input
+          type="text"
+          id="phone-number"
+          placeholder="Your phone number.."
+          onkeyup="checkphone()"
+          required
+        />
+        <br />
+        <div id="error1" style="color: red">
+          <p id="error-phone">لطفا شماره تماس را به درستی وارد کنید</p>
+        </div>
+        <br />
+
+        <label for="">Email</label>
+        <br />
+        <input
+          type="text"
+          id="email"
+          placeholder="Your Email address.."
+          onkeyup="checkmail()"
+          required
+        />
+        <br />
+        <div id="error2" style="color: red">
+          <p id="error-mail">لطفا آدرس ایمیل را به درستی وارد کنید</p>
+        </div>
+        <br />
+
+        <label for="country">Country</label
+        ><span style="color: red !important; display: inline; float: none">
+          *</span
+        ><br />
+        <select id="country" class="font" required>
+          <option value="Honduras">Honduras</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Hungary">Hungary</option>
+          <option value="Iceland">Iceland</option>
+          <option value="India">India</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Iran, Islamic Republic of">
+            Iran, Islamic Republic of
+          </option>
+
+          <option value="Korea, Republic of">Korea, Republic of</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="Lao People's Democratic Republic">
+            Lao People's Democratic Republic
+          </option>
+          <option value="Latvia">Latvia</option>
+          <option value="Lebanon">Lebanon</option>
+          <option value="Lesotho">Lesotho</option>
+          <option value="Liberia">Liberia</option>
+          <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+          <option value="Liechtenstein">Liechtenstein</option>
+          <option value="Lithuania">Lithuania</option>
+          <option value="Luxembourg">Luxembourg</option>
+          <option value="Macao">Macao</option>
+          <option value="Macedonia, The Former Yugoslav Republic of">
+            Macedonia, The Former Yugoslav Republic of
+          </option>
+          <option value="Madagascar">Madagascar</option>
+          <option value="Malawi">Malawi</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Mali">Mali</option>
+          <option value="Malta">Malta</option>
+          <option value="Marshall Islands">Marshall Islands</option>
+          <option value="Martinique">Martinique</option>
+          <option value="Mauritania">Mauritania</option>
+          <option value="Mauritius">Mauritius</option>
+          <option value="Mayotte">Mayotte</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Micronesia, Federated States of">
+            Micronesia, Federated States of
+          </option></select
+        ><br />
+
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <p id="info"></p>
+    <script src="vlaid-form.js"></script>
+  </body>
+</html>
